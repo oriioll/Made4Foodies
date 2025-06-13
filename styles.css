@@ -160,7 +160,7 @@ aside p,
   padding: 0;
 }
 
-.features button {
+ button {
   background-color: #ff8a00;
   border: solid 2px #ff8a00;
   padding: 20px;
@@ -172,7 +172,7 @@ aside p,
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 6px 24px 0 rgba(170, 61, 0, 0.25),
     0 1.5px 4px 0 rgba(0, 0, 0, 0.1);
-  margin-top: -30px;
+    margin-top: 30px;
 }
 
 .features button:hover {
@@ -450,6 +450,7 @@ aside p,
 @media (min-width: 600px) and (max-width: 767px) {
   header {
     padding: 12px 20px;
+    
   }
 
   .navLogo {
@@ -513,5 +514,60 @@ aside p,
   .fotos img {
     max-height: 400px;
     object-fit: contain;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Versión conservativa - solo mejoras de compatibilidad */
+
+/* Estilos base (igual que tu versión actual) */
+
+
+
+/* Móviles (igual que tu versión) */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-x: hidden;
+  }
+
+
+
+  /* ... (mantener todos tus estilos móviles exactamente igual) ... */
+}
+
+/* Solo añadimos esto para compatibilidad con Chromebooks/pantallas medias */
+@media (min-width: 769px) and (max-width: 1366px) {
+  /* Ajustes mínimos que no cambian tu diseño */
+  header {
+    padding-left: 10%;
+    gap: 30px;
+  }
+  
+  .hero {
+    padding: 5% 10%;
+  }
+  
+  .fotos img {
+    max-height: 450px;
+  }
+}
+
+/* Para pantallas muy grandes (solo optimización) */
+@media (min-width: 1600px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .hero h1 {
+    font-size: 6rem;
   }
 }
