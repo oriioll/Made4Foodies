@@ -273,6 +273,7 @@ aside p,
     height: 300px;
     transform: none !important; /* Elimina transformaciones que puedan afectar */
     transition: transform 0.3s;
+       filter: brightness(1.1);
   }
 
   .fotos img:hover {
@@ -363,5 +364,154 @@ aside p,
     .hero h1 {
       font-size: 2rem;
     }
+  }
+}
+
+
+/* Estilos para tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    height: auto;
+  }
+
+  header {
+    padding: 15px 30px;
+    justify-content: space-between;
+  }
+
+  .navLogo {
+    height: 70px;
+  }
+
+  header ul {
+    gap: 25px;
+    margin-right: 0;
+  }
+
+  header ul li a {
+    font-size: 18px;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 30px;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    padding: 0;
+    width: 50%;
+  }
+
+  .subtitulo {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+
+  .fotos {
+    width: 45%;
+    justify-content: flex-end;
+  }
+
+  .fotos img {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0;
+  }
+
+  .aside-sections {
+    flex-direction: row;
+    padding: 0 30px;
+  }
+
+  aside {
+    width: 48%;
+    padding: 40px 25px;
+  }
+
+  aside h1, .contact h1 {
+    font-size: 3rem;
+  }
+
+  aside p, .features p, .contact p {
+    font-size: 1.1rem;
+  }
+
+  .contact {
+    padding: 60px 30px;
+  }
+}
+
+/* Estilos para pantallas pequeñas de navegador (600px - 768px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .navLogo {
+    height: 60px;
+  }
+
+  header ul {
+    gap: 15px;
+  }
+
+  header ul li a {
+    font-size: 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 40px 25px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+    width: 100%;
+  }
+
+  .subtitulo {
+    font-size: 1.3rem;
+  }
+
+  .fotos {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .aside-sections {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  aside {
+    width: 100%;
+    padding: 35px 25px;
+  }
+
+  aside h1, .contact h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Ajustes para móvil (ya existentes) */
+@media (max-width: 599px) {
+  /* (Mantener los estilos móviles anteriores) */
+}
+
+/* Ajustes adicionales para pantallas muy anchas pero cortas (modo pestaña pequeña) */
+@media (max-height: 600px) and (min-width: 768px) {
+  .hero {
+    min-height: 600px;
+  }
+  
+  .fotos img {
+    max-height: 400px;
+    object-fit: contain;
   }
 }
