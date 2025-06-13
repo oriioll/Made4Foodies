@@ -113,12 +113,17 @@ header ul li a:hover::after {
 }
 
 .phone{
-  height: 500px;
-  width: 100%;
-  max-width: 400px;
-  object-fit: contain;
+
+}
+.fotos img.phone {
+  max-height: 400px; /* Aumentamos el tamaño máximo */
+  width: auto; /* Permitimos que el ancho se ajuste proporcionalmente */
+  margin: 20px 0;
+  padding: 0;
+    object-fit: contain;
   transition: transform 0.3s;
 }
+
 
 .fotos img:hover {
   transform: rotate3d(1, 1, 0, 25deg);
@@ -343,6 +348,9 @@ button:hover {
   .hero {
     min-height: 70vh;
   }
+  body {
+    overflow-x: hidden;
+  }
 }
 
 /* Ajuste para pantallas anchas y cortas (modo landscape) */
@@ -359,3 +367,5 @@ button:hover {
     max-height: 300px;
   }
 }
+
+
