@@ -8,7 +8,10 @@
     </title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/Made4Foodies.png" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
   </head>
   <body>
     <header id="header">
@@ -21,11 +24,11 @@
       </a>
       <ul>
         <li class="navLink"><a href="#header">Inicio</a></li>
-      
+
         <li class="navLink">
           <a href="#about">Quienes Somos & Que Ofrecemos</a>
         </li>
- 
+
         <li class="navLink"><a href="#contact">Contacto</a></li>
       </ul>
     </header>
@@ -74,11 +77,11 @@
               >💰 Tu web al mejor precio</strong
             >
             - Te entregamos una web funcional, optimizada y adaptada a tu marca
-            por X€.
+            por 100€.
           </p>
         </aside>
       </section>
-      <button>CONSIGUE TU WEB AHORA</button>
+      <button id="button">CONSIGUE TU WEB AHORA</button>
       <section id="contact" class="contact">
         <h1>Contacto</h1>
         <p>Puedes contactarnos para consultas y pedidos vía:</p>
@@ -148,5 +151,10 @@
         </div>
       </section>
     </main>
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        window.location.href = "https://www.instagram.com/made4foodies/";
+      });
+    </script>
   </body>
 </html>

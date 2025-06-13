@@ -112,9 +112,7 @@ header ul li a:hover::after {
   margin: 0;
 }
 
-.phone{
 
-}
 .fotos img.phone {
   max-height: 400px; /* Aumentamos el tamaño máximo */
   width: auto; /* Permitimos que el ancho se ajuste proporcionalmente */
