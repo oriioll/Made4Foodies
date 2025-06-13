@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 200vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #fcebd5, #fff2e0);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  color: #085a70;
+}
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 200px;
+  gap: 50px;
+}
+.navLogo {
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+  list-style: none;
+  gap: 40px;
+  text-decoration: none;
+}
+header ul li a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff8a00;
+  text-decoration: none;
+  position: relative; /* Necesario para el ::after */
+}
+
+.navLogo:hover {
+  transform: scale(1.05);
+}
+.navLink {
+  transition: transform 0.3s;
+}
+.navLink:hover {
+  transform: scale(1.05);
+}
+
+/* EFECTO SMOOTH DE UNDERLINE AL HOVEAR */
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #ff8a00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+header ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #085a70;
+  font-weight: bold;
+}
+.hero h1 {
+  font-size: 5.9rem;
+  margin: 0;
+  padding: 0;
+  line-height: 0.5;
+  padding: 100px;
+}
+.subtitulo {
+  font-size: 1.5rem;
+  color: #085a70;
+  line-height: 0.1;
+}
+.fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.fotos img {
+  height: 450px;
+  width: 40%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.fotos img:hover {
+  transform: scale(1.1);
+  transform: rotate3d(1, 1, 0, 25deg);
+   filter: brightness(1.1);
+
+
+}
+
+.aside-sections {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside {
+  width: 50%;
+  height: 100%;
+  border: solid 2px #aa3d00;
+  border-radius: 5px;
+}
+strong {
+  color: #aa3d00;
+}
+aside h1,
+.contact h1 {
+  font-size: 5rem;
+}
+aside p,
+.features p, .contact p {
+  font-size: 1.1rem;
+  margin: 20px;
+  font-weight: 500;
+  color: #4e342e;
+}
+
+.about,
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.features p {
+  text-align: left;
+  line-height: 1.6;
+  margin-top: -40px;
+}
+
+.features h1 {
+  padding: 0;
+}
+
+.features button {
+  background-color: #ff8a00;
+  border: solid 2px #ff8a00;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 24px 0 rgba(170, 61, 0, 0.25),
+    0 1.5px 4px 0 rgba(0, 0, 0, 0.1);
+  margin-top: -30px;
+}
+
+.features button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px 0 rgba(170, 61, 0, 0.35),
+    0 3px 8px 0 rgba(0, 0, 0, 0.13);
+}
+
+.redes, .mail, .instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.mail a, .instagram a {
+  text-decoration: none;
+}
+.mail p, .instagram p {
+  color: #ff8a00;
+  font-weight: bold;
+}
+.mail a svg, .instagram a svg{
+  transition: transform .3s;
+}
+
+.mail a svg:hover, .instagram a svg:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  /* Header mejorado */
+  header {
+    padding: 15px 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: #fcebd5;
+    position: relative; /* Eliminamos el fixed */
+  }
+
+  .navLogo {
+    height: 50px;
+    margin: 0;
+  }
+
+  header ul {
+    flex-direction: row;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header ul li a {
+    font-size: 14px;
+    white-space: nowrap; /* Evita que los links se rompan en varias líneas */
+  }
+
+  /* Hero section mejorada */
+  .hero {
+    flex-direction: column;
+    min-height: 90vh;
+    padding: 30px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+    line-height: 1.4;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .fotos {
+    margin-top: 30px;
+  }
+
+  .fotos img {
+    width: 95%;
+    max-width: 400px;
+    height: 300px;
+    transform: none !important; /* Elimina transformaciones que puedan afectar */
+    transition: transform 0.3s;
+  }
+
+  .fotos img:hover {
+    transform: scale(1.05) !important;
+  }
+
+  /* Secciones laterales */
+  .aside-sections {
+    flex-direction: column;
+    height: auto;
+  }
+
+  aside {
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+
+  aside h1, .contact h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  aside p, .features p, .contact p {
+    font-size: 1rem;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .features button {
+    margin-top: 20px;
+    padding: 15px 30px;
+  }
+
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .redes {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Ajustes para móviles pequeños (menos de 500px) */
+  @media (max-width: 500px) {
+    header ul {
+      gap: 8px;
+    }
+    
+    header ul li a {
+      font-size: 12px;
+      padding: 5px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    
+    .subtitulo {
+      font-size: 1rem;
+    }
+    
+    .fotos img {
+      width: 95%;
+    }
+
+    aside h1, .contact h1 {
+      font-size: 1.8rem;
+    }
+    
+    .about p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
+
+  /* Ajuste especial para pantallas muy estrechas */
+  @media (max-width: 400px) {
+    header {
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    header ul {
+      margin-top: 10px;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+}
