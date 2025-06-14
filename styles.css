@@ -186,7 +186,7 @@ button {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all .3s ease;
   box-shadow: 0 6px 24px 0 rgba(170, 61, 0, 0.25),
     0 1.5px 4px 0 rgba(0, 0, 0, 0.1);
   margin: 30px auto;
@@ -194,11 +194,10 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) ;
   box-shadow: 0 12px 32px 0 rgba(170, 61, 0, 0.35),
-    0 3px 8px 0 rgba(0, 0, 0, 0.13);
+              0 3px 8px 0 rgba(0, 0, 0, 0.13) ;
 }
-
 .contact {
   padding: 60px 5%;
 }
@@ -370,4 +369,43 @@ button:hover {
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+/* Animación de fade-in y slide-up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header animación */
+header {
+  animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+/* Hero animación */
+.hero {
+  animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+/* Secciones laterales animación */
+.aside-sections {
+  animation: fadeInUp 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+/* Botón animación */
+#button {
+  animation: fadeInUp 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.7s both;
+}
+
+/* Contacto animación */
+.contact {
+  animation: fadeInUp 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.9s both;
 }
